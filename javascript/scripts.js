@@ -53,13 +53,17 @@ function fiveUserNumbers() {
         for (let j = 0; j < userArray.length; j++) {
 
             if (myArray[i] == userArray[j]) {
-                
-                score ++;
+
+                if (!guessedNumbers.includes(myArray[i])) {
+
+                    guessedNumbers.push(myArray[i]);
+
+                }
 
             }            
         }
     }
 
-    console.log("Hai indovinato " + score + " numeri!");
-
+    console.log("Hai totalizzato un punteggio di: " + guessedNumbers.length + ". " + "I numeri che hai indovinato sono: " + guessedNumbers + ".");
+    
 }
